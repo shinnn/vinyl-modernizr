@@ -4,14 +4,13 @@
 */
 'use strict';
 
-var path = require('path');
+const path = require('path');
 
-var modernizrStream = require('modernizr-stream');
-var objectAssign = require('object-assign');
-var Vinyl = require('vinyl');
+const modernizrStream = require('modernizr-stream');
+const Vinyl = require('vinyl');
 
 module.exports = function vinylModernizr(options) {
-  return new Vinyl(objectAssign({
+  return new Vinyl(Object.assign({
     path: path.resolve('modernizr.js')
   }, options, {
     contents: modernizrStream(options)

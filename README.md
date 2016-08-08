@@ -3,8 +3,8 @@
 [![NPM version](https://img.shields.io/npm/v/vinyl-modernizr.svg)](https://www.npmjs.com/package/vinyl-modernizr)
 [![Build Status](https://travis-ci.org/shinnn/vinyl-modernizr.svg?branch=master)](https://travis-ci.org/shinnn/vinyl-modernizr)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-modernizr.svg)](https://coveralls.io/github/shinnn/is-gist-starred?branch=master)
-[![Dependency Status](https://david-dm.org/shinnn/vinyl-modernizr.svg)](https://david-dm.org/shinnn/vinyl-modernizr)
-[![devDependency Status](https://david-dm.org/shinnn/vinyl-modernizr/dev-status.svg)](https://david-dm.org/shinnn/vinyl-modernizr#info=devDependencies)
+[![dependencies Status](https://david-dm.org/shinnn/vinyl-modernizr/status.svg)](https://david-dm.org/shinnn/vinyl-modernizr)
+[![devDependencies Status](https://david-dm.org/shinnn/vinyl-modernizr/dev-status.svg)](https://david-dm.org/shinnn/vinyl-modernizr?type=dev)
 
 Create a [vinyl](https://github.com/gulpjs/vinyl) object of a [Modernizr](https://modernizr.com/) JavaScript file
 

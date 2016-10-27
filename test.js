@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const concatStream = require('concat-stream');
 const test = require('tape');

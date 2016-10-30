@@ -19,7 +19,7 @@ test('vinylModernizr', t => {
 
   t.strictEqual(file.relative, '../modernizr.js', 'should support Vinyl constructor options.');
 
-  file.pipe(concatStream(data => {
+  file.contents.pipe(concatStream(data => {
     t.ok(data.length < 1200, 'should support Modernizr build options.');
   }));
 });

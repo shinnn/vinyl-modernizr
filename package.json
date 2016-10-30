@@ -5,7 +5,7 @@
   "repository": "shinnn/vinyl-modernizr",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --fix --config @shinnn/node index.js test.js",
+    "pretest": "eslint --fix --format=codeframe index.js test.js",
     "test": "node --throw-deprecation --track-heap-objects test.js | tap-spec",
     "coverage": "istanbul cover test.js"
   },
@@ -28,14 +28,16 @@
   ],
   "dependencies": {
     "modernizr-stream": "^1.0.0",
-    "vinyl": "^1.1.1"
+    "vinyl": "^2.0.0"
   },
   "devDependencies": {
-    "@shinnn/eslint-config-node": "^2.0.0",
-    "acorn": "^3.0.4",
-    "eslint": "^2.7.0",
-    "istanbul": "^0.4.3",
+    "@shinnn/eslint-config-node": "^3.0.0",
+    "eslint": "^3.9.0",
+    "istanbul": "^0.4.5",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.1"
+    "tape": "^4.6.2"
+  },
+  "eslintConfig": {
+    "extends": "@shinnn/node"
   }
 }

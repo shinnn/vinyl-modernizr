@@ -13,7 +13,7 @@ const vinylModernizr = require('vinyl-modernizr');
 
 const file = vinylModernizr();
 file.path; //=> '/path/to/cwd/modernizr.js'
-file.pipe(process.stdout); // prints '/*!\n * modernizr v3.3.1\n * Build http://modernizr.com/download? ...'
+file.contents.pipe(process.stdout); // prints '/*!\n * modernizr v3.3.1\n * Build http://modernizr.com/download? ...'
 ```
 
 ## Installation
@@ -35,11 +35,11 @@ const vinylModernizr = require('vinyl-modernizr');
 *options*: `Object`  
 Return: `Object` ([`Vinyl`](https://www.npmjs.com/package/vinyl) instance)
 
-It returns a [vinyl](https://github.com/gulpjs/vinyl#file) object that contains [modernizr-stream](https://github.com/shinnn/modernizr-stream) as its [`contents`](https://github.com/gulpjs/vinyl#contents) property.
+It returns a [Vinyl](https://github.com/gulpjs/vinyl#new-vinyloptions) object that contains [modernizr-stream](https://github.com/shinnn/modernizr-stream) as its [`contents`](https://github.com/gulpjs/vinyl#filecontents) property.
 
 #### Options
 
-All options are passed to [modernizr-stream](https://github.com/shinnn/modernizr-stream#modernizrstreamoptions) and [vinyl](https://github.com/gulpjs/vinyl#constructoroptions) constructor. Note that [`path`](https://github.com/gulpjs/vinyl#optionspath) option defaults to `modernizr.js` right under the current directory.
+All options are passed to [modernizr-stream](https://github.com/shinnn/modernizr-stream#modernizrstreamoptions) and [`Vinyl`](https://github.com/gulpjs/vinyl#options) constructor. Note that [`path`](https://github.com/gulpjs/vinyl#optionspath) option defaults to `modernizr.js` right under the current directory.
 
 ```javascript
 vinylModernizr().relative; //=> 'modernizr.js'

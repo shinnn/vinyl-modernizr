@@ -1,10 +1,8 @@
 # vinyl-modernizr
 
-[![NPM version](https://img.shields.io/npm/v/vinyl-modernizr.svg)](https://www.npmjs.com/package/vinyl-modernizr)
-[![Build Status](https://travis-ci.org/shinnn/vinyl-modernizr.svg?branch=master)](https://travis-ci.org/shinnn/vinyl-modernizr)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-modernizr.svg)](https://coveralls.io/github/shinnn/is-gist-starred?branch=master)
-[![dependencies Status](https://david-dm.org/shinnn/vinyl-modernizr/status.svg)](https://david-dm.org/shinnn/vinyl-modernizr)
-[![devDependencies Status](https://david-dm.org/shinnn/vinyl-modernizr/dev-status.svg)](https://david-dm.org/shinnn/vinyl-modernizr?type=dev)
+[![npm version](https://img.shields.io/npm/v/vinyl-modernizr.svg)](https://www.npmjs.com/package/vinyl-modernizr)
+[![Build Status](https://travis-ci.com/shinnn/vinyl-modernizr.svg?branch=master)](https://travis-ci.com/shinnn/vinyl-modernizr)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-modernizr.svg)](https://coveralls.io/github/shinnn/vinyl-modernizr?branch=master)
 
 Create a [vinyl](https://github.com/gulpjs/vinyl) object of a [Modernizr](https://modernizr.com/) JavaScript file
 
@@ -12,13 +10,13 @@ Create a [vinyl](https://github.com/gulpjs/vinyl) object of a [Modernizr](https:
 const vinylModernizr = require('vinyl-modernizr');
 
 const file = vinylModernizr();
-file.path; //=> '/path/to/cwd/modernizr.js'
-file.contents.pipe(process.stdout); // prints '/*!\n * modernizr v3.3.1\n * Build http://modernizr.com/download? ...'
+file.path; //=> '/Users/you/current/working/directory/modernizr.js'
+file.contents.pipe(process.stdout); // prints '/*!\n * modernizr v3.6.0\n * Build http://modernizr.com/download? ...'
 ```
 
 ## Installation
 
-[Use npm.](https://docs.npmjs.com/cli/install)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install vinyl-modernizr
@@ -33,7 +31,7 @@ const vinylModernizr = require('vinyl-modernizr');
 ### vinylModernizr([*options*])
 
 *options*: `Object`  
-Return: `Object` ([`Vinyl`](https://www.npmjs.com/package/vinyl) instance)
+Return: [`Vinyl`](https://www.npmjs.com/package/vinyl)
 
 It returns a [Vinyl](https://github.com/gulpjs/vinyl#new-vinyloptions) object that contains [modernizr-stream](https://github.com/shinnn/modernizr-stream) as its [`contents`](https://github.com/gulpjs/vinyl#filecontents) property.
 
@@ -43,11 +41,10 @@ All options are passed to [modernizr-stream](https://github.com/shinnn/modernizr
 
 ```javascript
 vinylModernizr().relative; //=> 'modernizr.js'
-vinylModernizr({base: 'foo'}).relative; //=> '../modernizr.js'
 ```
 
 ## License
 
-Copyright (c) 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2016 - 2019 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).

@@ -1,6 +1,6 @@
 {
   "name": "vinyl-modernizr",
-  "version": "3.0.0-0",
+  "version": "3.0.0-1",
   "description": "Create a vinyl object of a Modernizr JavaScript file",
   "repository": "shinnn/vinyl-modernizr",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",

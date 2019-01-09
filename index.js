@@ -15,5 +15,5 @@ module.exports = function vinylModernizr(...args) {
     throw error;
   }
 
-  return new Vinyl(Object.assign({path: resolve('modernizr.js')}, args[0], {contents: modernizrStream(...args)}));
+  return new Vinyl({path: resolve('modernizr.js'), ...args[0], contents: modernizrStream(...args)});
 };

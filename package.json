@@ -1,43 +1,45 @@
 {
-  "name": "vinyl-modernizr",
-  "version": "3.0.0-1",
-  "description": "Create a vinyl object of a Modernizr JavaScript file",
-  "repository": "shinnn/vinyl-modernizr",
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "scripts": {
-    "pretest": "eslint --fix --format=codeframe index.js test.js",
-    "test": "node --throw-deprecation --track-heap-objects test.js | tap-spec",
-    "coverage": "istanbul cover test.js"
-  },
-  "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "modernizr",
-    "build",
-    "generate",
-    "code",
-    "script",
-    "source",
-    "stream",
-    "readable",
-    "file",
-    "virtual",
-    "vinyl"
-  ],
-  "dependencies": {
-    "modernizr-stream": "^1.0.0",
-    "vinyl": "^2.0.0"
-  },
-  "devDependencies": {
-    "@shinnn/eslint-config-node": "^3.0.0",
-    "eslint": "^3.9.0",
-    "istanbul": "^0.4.5",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.2"
-  },
-  "eslintConfig": {
-    "extends": "@shinnn/node"
-  }
+	"name": "vinyl-modernizr",
+	"version": "3.0.0-1",
+	"description": "Create a vinyl object of a Modernizr JavaScript file",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"repository": "shinnn/vinyl-modernizr",
+	"license": "MIT",
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "nyc node test.js"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"modernizr",
+		"build",
+		"generate",
+		"code",
+		"script",
+		"source",
+		"stream",
+		"readable",
+		"file",
+		"virtual",
+		"vinyl"
+	],
+	"dependencies": {
+		"modernizr-stream": "^2.0.0",
+		"vinyl": "^2.2.0"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config": "^6.8.9",
+		"eslint": "^5.12.0",
+		"nyc": "^13.1.0",
+		"nyc-config-common": "^1.0.1",
+		"tape": "^4.9.2"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	},
+	"nyc": {
+		"extends": "nyc-config-common"
+	}
 }
